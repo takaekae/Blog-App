@@ -400,6 +400,14 @@ body{
       text-transform: uppercase;
       margin-bottom: 1rem;
       // put an effects error
+      .cont{
+        margin: 2rem 0;
+        color: $first-color;
+      }
+      li{
+        margin-bottom: .5rem;
+        color: $first-color;
+      }
     }
 
     div.field_with_errors{

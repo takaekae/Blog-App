@@ -2,9 +2,16 @@
         <%= form_with(model: post, local: true) do|f| %>
 
             <div class="wrapper">
-                <div class="errors">
-                <%= post.errors.full_messages.to_sentence %>
-                </div>
+                <% if post.errors.any?%>
+                    <div class="errors">
+                        <h3><%= pluralize(post.errors.count, "error") %> Prohibited this post from being saved: </h3>
+                        <h3 class="cont"> Prohibited this post from being saved: </h3>
+
+                        <%post.errors.full_messages.each do|message| %>
+                            <li><%= message %></li>
+                        <% end %>
+                    </div>
+                <% end %>
                 <%= f.label :title %>
                 <%= f.text_field :title %>
 
