@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@rails/ujs": "^7.0.4",
+    "@rails/webpacker": "3.5"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}

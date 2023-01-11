@@ -1,0 +1,16 @@
+<div class="show__container">
+    <div class="wrapper">
+        <div class="show__date">
+            <%=@post.name %> |
+            <%=date_time(@post) %>
+        </div>
+        <h3 class="show__title"><%=@post.title%></h3>
+            <p class="show__description"><%=@post.description%></p>
+
+        <div class="configure">
+          <%= link_to "Edit", edit_post_path(@post), class: "show__edit--link" %>
+          <%= link_to "Delete", @post, class: "show__delete--link", method: :delete, data:{confirm:"Are you sure to delete this post?"}%>
+        </div>
+
+    </div>
+</div>
