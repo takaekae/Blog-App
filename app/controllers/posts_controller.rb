@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
     def index
-        @posts = Post.where("published_at < ?", Time.now).order("published_at")
+        @posts = Post.all.order('published_at DESC')
     end
 
     def show
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
     def update
         @post = Post.find(params[:id])
         if @post.update(post_params)
-        redirect_to @post
+            redirect_to @post
         else
             render :edit
         end
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     def create
         @post = Post.new(post_params)
         if @post.save
-        redirect_to @post
+            redirect_to @post
         else
             render :new
         end
