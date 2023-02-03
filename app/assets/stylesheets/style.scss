@@ -192,6 +192,18 @@ body{
 
 
 }
+
+.heading{
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 500;
+  top: 5rem;
+  right: 73rem;
+  letter-spacing: 1px;
+  color: $first-color;
+  text-align: center;
+  margin: 2rem;
+}
 .show__container{
   display: flex;
   flex-direction: column;
@@ -296,6 +308,8 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+
 
   .wrapper{
     position: relative;
